@@ -48,11 +48,17 @@ public class Test01 {
 
                 XSSFRow row1 = sheet.getRow(index);
                 //得到Excel工作表指定行的单元格
-                XSSFCell cell = row1.getCell(indexY);
-                if(cell==null||cell.equals("")||cell.getCellType() ==XSSFCell.CELL_TYPE_BLANK){
+                XSSFCell cellColumn1  = row1.getCell(1);
+                if(cellColumn1==null||cellColumn1.equals("")||cellColumn1.getCellType() ==XSSFCell.CELL_TYPE_BLANK){
                     break;
                 }
-                    String cellValue = cell.getStringCellValue();
+                XSSFCell cell = row1.getCell(indexY);
+                String cellValue= "";
+                if(cell==null||cell.equals("")||cell.getCellType() ==XSSFCell.CELL_TYPE_BLANK){
+                    cellValue = "";
+                }else{
+                    cellValue = cell.getStringCellValue();
+                }
                 System.out.println("值是多少===》"+cellValue);
                 if(indexY == 1){
                     strArray.add(cellValue);
