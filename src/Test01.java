@@ -95,7 +95,7 @@ public class Test01 {
             out = new FileOutputStream(new File("/Users/tangtang/Desktop/ch.text"));
             System.out.println("======="+number);
             for (int i = 0; i < chArray.size(); i++) {
-                out.write(("\""+strArray.get(i) + "\" = \"" + enArray.get(i)+"\";\r\n").getBytes());
+                out.write(("\""+strArray.get(i) + "\" = \"" + chArray.get(i)+"\";\r\n").getBytes());
             }
 
             out = new FileOutputStream(new File("/Users/tangtang/Desktop/en.text"));
