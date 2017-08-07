@@ -62,6 +62,12 @@ public class Test01 {
                     cellValue = cell.getStringCellValue();
                 }
                 System.out.println("值是多少===》"+cellValue);
+                if(cellValue == null ||"".equals(cellValue)){
+
+                }else{
+                    cellValue = cellValue.replaceAll("\n", "");
+                    cellValue = cellValue.replaceAll("\"","'");
+                }
                 if(indexY == 0){
                     strArray.add(cellValue);
                 }
