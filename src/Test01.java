@@ -37,7 +37,7 @@ public class Test01 {
         //通过构造函数传参
         XSSFWorkbook workbook = new XSSFWorkbook(fis);
         //获取工作表
-        XSSFSheet sheet = workbook.getSheetAt(1);
+        XSSFSheet sheet = workbook.getSheetAt(0);
         //获取行,行号作为参数传递给getRow方法,第一行从0开始计算
         XSSFRow row = sheet.getRow(2);
         //总行数
